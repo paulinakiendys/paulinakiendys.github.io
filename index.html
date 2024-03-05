@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body onload="loader()">
     <header>
       <nav class="navbar fixed-top">
         <div class="container-fluid">
@@ -110,11 +110,12 @@
             <div class="col-lg-6">
               <!-- Hero profile picture-->
               <div class="d-flex justify-content-center p-5">
-                <div>
+                <div class="placeholder-glow">
                   <img
-                    class="img-fluid"
+                    class="img-fluid placeholder rounded-circle bg-secondary"
                     src="assets/profile.png"
                     alt="Profile picture"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -129,10 +130,15 @@
           <div class="row justify-content-center">
             <div class="col-xl-6 text-center py-5">
               <h2>About me</h2>
-              <hr>
-              <p class="fs-5 lead">I'm a passionate Frontend Developer from Sweden. With expertise in HTML, CSS, and JavaScript I specialize in crafting seamless user experiences. I'm fluent in English, Swedish, Polish, and Spanish, and actively learning French. Let's connect!</p>
+              <hr />
+              <p class="fs-5 lead">
+                I'm a passionate Frontend Developer from Sweden. With expertise
+                in HTML, CSS, and JavaScript I specialize in crafting seamless
+                user experiences. I'm fluent in English, Swedish, Polish, and
+                Spanish, and actively learning French. Let's connect!
+              </p>
             </div>
-          </div> 
+          </div>
         </div>
       </section>
       <!-- About me section ends here -->
@@ -140,55 +146,196 @@
       <section id="projects">
         <div class="container">
           <div class="row py-5 justify-content-center">
-          <!-- Projects cards-->
+            <!-- Projects cards-->
             <div class="col-md-6 col-xxl-3 d-flex justify-content-center mb-5">
-              <div class="card mb-5 h-100 w-100" style="width: 18rem;">
-                <img src="assets/lucaDeli.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Luca Deli</h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">Work sample</h6>
-                  <p class="card-text">Landing page designed using Figma to promote a luxurious vegetarian charcuterie substitute bag, allowing vegetarians to enjoy a premium charcuterie experience at home.</p>
+              <div class="card mb-5 h-100 w-100" style="width: 18rem">
+                <div class="placeholder-glow">
+                  <img
+                    src="assets/lucaDeli.jpg"
+                    class="card-img-top placeholder bg-secondary"
+                    alt="Luca Deli"
+                    loading="lazy"
+                  />
                 </div>
-                <div class="card-footer text-end">
-                  <a href="https://www.figma.com/file/DoyR6fGzMTzfMImgQ4p2xu/Luca-Deli?type=design&node-id=1%3A327&mode=design&t=I7pN2ZiaXNM784tL-1" class="btn btn-outline-primary" target="_blank">View design</a>
-                </div>                
+              <div class="card-body">
+                <h5 class="card-title">Luca Deli</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Work sample
+                </h6>
+                <p class="card-text">
+                  Landing page designed using Figma to promote a luxurious
+                  vegetarian charcuterie substitute bag, allowing vegetarians to
+                  enjoy a premium charcuterie experience at home.
+                </p>
               </div>
-            </div>
-            <div class="col-md-6 col-xxl-3 d-flex justify-content-center mb-5">
-              <div class="card mb-5 h-100 w-100" style="width: 18rem;">
-                <img src="assets/memories.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Memories</h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">Degree project</h6>
-                  <p class="card-text">Full-stack application developed with MongoDB, Express, Angular and Node.js. Authentication implemented through JSON Web Tokens. Frontend built using Angular and styled with Angular Material. State management employed using NgRx.</p>
-                  </div>
-                  <div class="card-footer text-end">
-                    <a href="https://github.com/paulinakiendys/examensarbete-client" class="btn btn-outline-primary" target="_blank">Client code</a>
-                    <a href="https://github.com/paulinakiendys/examensarbete-server" class="btn btn-outline-secondary" target="_blank">Server code</a>
-                  </div> 
-              </div>
-            </div>
-            <div class="col-md-6 col-xxl-3 d-flex justify-content-center mb-5">
-              <div class="card mb-5 h-100 w-100" style="width: 18rem;">
-                <img src="assets/handlingar.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Handlingar.se</h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">Volunteer project</h6>
-                  <p class="card-text">The platform is a public web service that helps citizens, companies and associations to request public documents and public data from authorities in Sweden in accordance with the principle of public access to official records and the Data Act.</p>
-                </div>
-                <div class="card-footer text-end">
-                  <a href="https://handlingar.se/" class="btn btn-outline-primary" target="_blank">Visit Handlingar.se</a>
-                </div>
+              <div class="card-footer text-end">
+                <a
+                  href="https://www.figma.com/file/DoyR6fGzMTzfMImgQ4p2xu/Luca-Deli?type=design&node-id=1%3A327&mode=design&t=I7pN2ZiaXNM784tL-1"
+                  class="btn btn-outline-primary"
+                  target="_blank"
+                  >View design</a
+                >
               </div>
             </div>
           </div>
+          <div class="col-md-6 col-xxl-3 d-flex justify-content-center mb-5">
+            <div class="card mb-5 h-100 w-100" style="width: 18rem">
+              <div class="placeholder-glow">
+                <img
+                  src="assets/memories.jpg"
+                  class="card-img-top placeholder bg-secondary"
+                  alt="Memories"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Memories</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Degree project
+                </h6>
+                <p class="card-text">
+                  Full-stack application developed with MongoDB, Express,
+                  Angular and Node.js. Authentication implemented through JSON
+                  Web Tokens. Frontend built using Angular and styled with
+                  Angular Material. State management employed using NgRx.
+                </p>
+              </div>
+              <div class="card-footer text-end">
+                <a
+                  href="https://github.com/paulinakiendys/examensarbete-client"
+                  class="btn btn-outline-primary"
+                  target="_blank"
+                  >Client code</a
+                >
+                <a
+                  href="https://github.com/paulinakiendys/examensarbete-server"
+                  class="btn btn-outline-secondary"
+                  target="_blank"
+                  >Server code</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xxl-3 d-flex justify-content-center mb-5">
+            <div class="card mb-5 h-100 w-100" style="width: 18rem">
+              <div class="placeholder-glow">
+                <img
+                  src="assets/handlingar.jpg"
+                  class="card-img-top placeholder bg-secondary"
+                  alt="Handlingar"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Handlingar.se</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Volunteer project
+                </h6>
+                <p class="card-text">
+                  The platform is a public web service that helps citizens,
+                  companies and associations to request public documents and
+                  public data from authorities in Sweden in accordance with the
+                  principle of public access to official records and the Data
+                  Act.
+                </p>
+              </div>
+              <div class="card-footer text-end">
+                <a
+                  href="https://handlingar.se/"
+                  class="btn btn-outline-primary"
+                  target="_blank"
+                  >Visit Handlingar.se</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xxl-3 d-flex justify-content-center mb-5">
+            <div class="card mb-5 h-100 w-100" style="width: 18rem">
+              <div class="placeholder-glow">
+                <img
+                  src="assets/places.jpg"
+                  class="card-img-top placeholder bg-secondary"
+                  alt="Places"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Places</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Personal project
+                </h6>
+                <p class="card-text">
+                  Full-stack web application built with React and Vite. It
+                  incorporates Leaflet for maps and interacts with the Supabase
+                  cloud database.
+                </p>
+              </div>
+              <div class="card-footer text-end">
+                <a
+                  href="https://github.com/paulinakiendys/places"
+                  class="btn btn-outline-primary"
+                  target="_blank"
+                  >Code</a
+                >
+                <a
+                  href="https://places-omega.vercel.app/"
+                  class="btn btn-outline-secondary"
+                  target="_blank"
+                  >Live</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xxl-3 d-flex justify-content-center mb-5">
+            <div class="card mb-5 h-100 w-100" style="width: 18rem">
+              <div class="placeholder-glow">
+                <img
+                  src="assets/workInProgress.jpg"
+                  class="card-img-top placeholder bg-secondary"
+                  alt="Work in progress"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Hotel Management</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Personal project
+                </h6>
+                <p class="card-text">
+                  Currently in development. Hotel management application built
+                  using React and React Query. Supabase is used for table
+                  management, storage and authentication.
+                </p>
+              </div>
+              <div class="card-footer text-end">
+                <a
+                  href="https://github.com/paulinakiendys/hotel-management"
+                  class="btn btn-outline-primary"
+                  target="_blank"
+                  >Code</a
+                >
+                <a
+                  href="https://hotel-management-omega-five.vercel.app/"
+                  class="btn btn-outline-secondary"
+                  target="_blank"
+                  >Live</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <!-- Projects section ends here -->
     </main>
     <footer class="bg-light py-5">
       <div class="container">
-        <hr>
-        <small class="text-body-secondary">Copyright &copy; Paulina Kiendys <script>document.write(new Date().getFullYear())</script></small>
+        <hr />
+        <small class="text-body-secondary"
+          >Copyright &copy; Paulina Kiendys
+          <script>
+            document.write(new Date().getFullYear());
+          </script></small
+        >
       </div>
     </footer>
     <script
@@ -196,5 +343,14 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function loader() {
+        const placeholders = document.querySelectorAll(".placeholder-glow");
+        placeholders.forEach(function (placeholder) {
+          placeholder.classList.remove('placeholder-glow');
+          placeholder.querySelector('img').classList.remove('placeholder');
+        });
+      }
+    </script>
   </body>
 </html>
